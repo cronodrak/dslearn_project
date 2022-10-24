@@ -1,12 +1,15 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,9 +24,12 @@ public class Course implements Serializable {
   private String name;
   private String imgUri;
   private String imgGrayUri;
-  
+
+  @OneToMany(mappedBy = "course")
+  private List<Offer> offers = new ArrayList<>();
+
   public Course() {
-    
+
   }
 
   public Course(Long id, String name, String imgUri, String imgGrayUri) {
@@ -65,8 +71,8 @@ public class Course implements Serializable {
     this.imgGrayUri = imgGrayUri;
   }
 
-  public static long getSerialversionuid() {
-    return serialVersionUID;
+  public List<Offer> getOffers() {
+    return offers;
   }
 
   @Override
@@ -85,7 +91,5 @@ public class Course implements Serializable {
     Course other = (Course) obj;
     return Objects.equals(id, other.id);
   }
-  
-  
-  
+
 }

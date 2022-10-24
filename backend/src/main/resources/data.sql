@@ -13,4 +13,7 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
-INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML', 'https://plus.unsplash.com/premium_photo-1663050956267-fa2f5f905862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80', 'https://cdn4.vectorstock.com/i/1000x1000/01/53/online-course-isolated-icon-simple-element-from-vector-28230153.jpg'); 
+INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML', 'https://plus.unsplash.com/premium_photo-1663050956267-fa2f5f905862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80', 'https://cdn4.vectorstock.com/i/1000x1000/01/53/online-course-isolated-icon-simple-element-from-vector-28230153.jpg');
+
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2021-09-13T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-09-13T03:00:00Z', 1);
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2022-08-13T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-09-13T03:00:00Z', 1);
