@@ -13,6 +13,8 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.devsuperior.dslearnbds.entities.enums.DeliverStatus;
+
 @Entity
 @Table(name = "tb_deliver")
 public class Deliver implements Serializable {
